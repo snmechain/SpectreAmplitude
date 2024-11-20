@@ -14,7 +14,7 @@ namespace SpectreAmplitude
             List<Couple> couples = new List<Couple>();
 
             // Ajouter des couples (1/3, 3), (1/5, 5) etc.
-            for (int i = 3; i <= 5; i += 2)
+            for (int i = 1; i <= 5; i += 2)
             {
                 double secondValue = 1.0 / i;
                 couples.Add(new Couple(i, secondValue));
@@ -24,6 +24,21 @@ namespace SpectreAmplitude
             foreach (var couple in couples)
             {
                 Console.WriteLine(couple);
+            }
+
+            // assesseur
+            foreach (var couple in couples)
+            {
+                int a;
+                double b;
+
+                // exemple d'utilisation de l'asseseur get
+                a=couple.FirstValue;
+                b=couple.SecondValue;
+
+                // exemple d'utilisation de l'assesseur set
+                couple.FirstValue = 7;
+                couple.SecondValue = 1 / 7.0; 
             }
         }
     }
